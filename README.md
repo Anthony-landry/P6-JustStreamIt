@@ -6,3 +6,17 @@ Projet réalisé dans le cadre de la formation OpenClassrooms Développeur d'App
 Il s'agit de développer une application Web pour l'association JustStreamIt.
 L'application LitReviews, est un réseau social permettant de demander et poster des critiques de livres.
 
+## Spécifications technique 
+
+- Pas de framework (type boostrap , tailwind).
+- Utilisation de HTML5 CSS3.
+- Utilisation de javaScript Vanilla.
+
+## Objectif
+
+- Le site web présente le meileur film.
+- une liste des 7 films les mieux noté.
+- une liste des 7 meilleurs films de la catégorie Aventure.
+- une liste des 7 meilleurs films de la catégorie Comedy.
+- une liste des 7 meilleurs films de la catégorie Fanstasy.
+- Un carroussel donne la possibilité de naviguer dans chacune des listes.
