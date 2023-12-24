@@ -1,0 +1,341 @@
+/*Colors*/
+:root {
+	--main-color: #000000;
+	--secondary-color: #3b536b;
+	--text-color: #749ae0;
+	--footer-main-color: #3d424f;
+	--background-color: var(--main-color);
+}
+
+/*********/
+/*GENERAL*/
+/*********/
+
+body {
+	font-family: "Montserrat", sans-serif;
+	margin: 0;
+	color: white;
+	min-width: 300px;
+}
+h1 {
+	font-size: 48px;
+	font-weight: 700;
+	margin-top: 135px;
+	text-align: center;
+}
+h2 {
+	font-weight: 400;
+	margin-bottom: 55px;
+	text-align: center;
+}
+
+/*maxwidth + centering*/
+.block-container {
+	display: flex;
+	justify-content: center;
+}
+.block {
+	width: 100%;
+	max-width: 1200px;
+	/* padding: 0 25px; */
+}
+
+/********/
+/*Header*/
+/********/
+header {
+	background-color: var(--secondary-color);
+	display: flex;
+}
+.juststreamit {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	height: 130px;
+}
+.logo {
+	height: 75px;
+}
+.twopieces {
+	columns: 2;
+	justify-content: center;
+}
+.nav ul {
+	display: flex;
+	list-style: none;
+	line-height: 130px;
+	margin: 0;
+}
+.nav ul a {
+	margin-right: 50px;
+	color: var(--text-color);
+	text-decoration: none;
+}
+.nav ul li:hover {
+	font-weight: 600;
+	color: #0e1011 !important;
+}
+
+/******/
+/*Main*/
+/******/
+
+main {
+	background-color: var(--main-color);
+	padding-bottom: 25px;
+}
+/*** Cadre Meilleur film avec titre et boutton ***/
+.bestfilm {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	background-color: var(--main-color);
+	margin: 0;
+	padding: 0px;
+}
+.imgBestFilm {
+	/* display: flex; */
+	object-fit: cover;
+	object-position: center;
+	height: 40vh;
+	width: 60%;
+}
+.zone-button {
+	position: relative;
+	left: 0;
+	justify-content: center;
+	transition: 0.3s;
+}
+.zone-button p {
+	font-size: 42px;
+}
+.button-film {
+	border: 2px solid var(--main-color);
+	border-radius: 15px;
+	background-color: white;
+	color: var(--main-color);
+	padding: 7px 17px;
+	font-size: 16px;
+	cursor: pointer;
+	/* box-shadow: 0 5px #999 */
+}
+.button-film:hover {
+	background-color: #c7c5c5;
+}
+.button-film:active {
+	background-color: #c7c5c5;
+	box-shadow: 0 1px #999;
+	transform: translateY(4px);
+}
+.imgFilm:hover {
+	/* pour carroussel */
+	opacity: 0.7;
+}
+
+/*** Modal ***/
+
+/* The Modal (background) */
+.modal {
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 90vh; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.9); /* Black w/ opacity */
+	grid-template-columns: 1fr 1fr;
+}
+/* Modal Content (Image) */
+.modal-content {
+	margin: auto;
+	display: block;
+	width: 40%;
+	max-width: 600px;
+}
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+.caption {
+	margin: auto;
+	display: block;
+	width: 80%;
+	max-width: 700px;
+	text-align: center;
+	color: #ccc;
+	padding: 5px 0;
+}
+/* Add Animation - Zoom in the Modal */
+.modal-content,
+.caption {
+	animation-name: zoom;
+	animation-duration: 0.6s;
+}
+@keyframes zoom {
+	from {
+		transform: scale(0);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+/* The Close Button */
+.close {
+	position: absolute;
+	top: 15px;
+	right: 35px;
+	color: #f1f1f1;
+	font-size: 40px;
+	font-weight: bold;
+	transition: 0.3s;
+}
+.close:hover,
+.close:focus {
+	color: #bbb;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+	.modal-content {
+		width: 100%;
+	}
+}
+
+/*** slider ***/
+
+.slider-container {
+	overflow: hidden;
+}
+.bloc-film {
+	padding: 0 30px;
+	position: relative;
+	width: 650px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.slider {
+	display: flex;
+	margin-left: -90px;
+	transition: 0.5s;
+}
+.slide {
+	display: flex;
+	width: auto;
+	margin-right: 20px;
+	flex-shrink: 0;
+}
+.slide img {
+	width: 100%;
+	height: auto;
+	padding: 0 20px 0 20px;
+}
+.button-Prev {
+	position: absolute;
+	left: 0px;
+	height: 268px;
+	width: 30px;
+}
+.button-Next {
+	position: absolute;
+	right: 0;
+	height: 268px;
+	width: 30px;
+}
+
+/********/
+/*Footer*/
+/********/
+
+footer {
+	color: var(--footer-text-color);
+	display: flex;
+	flex-direction: column;
+	font-size: 14px;
+}
+.footerMain {
+	background-color: var(--footer-main-color);
+	padding: 50px 0;
+	width: 100%;
+}
+.footerMain .block {
+	display: flex;
+	justify-content: space-between;
+}
+.footerMain .block div {
+	display: flex;
+	align-items: center;
+}
+
+/***************/
+/*Media queries*/
+/***************/
+
+@media (max-width: 1000px) {
+	.juststreamit {
+		height: 75px;
+	}
+
+	.nav ul {
+		display: flex;
+		justify-content: space-around;
+		line-height: 40px;
+	}
+
+	.slide {
+		width: 100px;
+	}
+
+	.slide img {
+		height: 100%;
+	}
+
+	.slider-container {
+		width: 90%;
+		min-width: 100px;
+	}
+
+	.slider {
+		width: 90%;
+		padding-left: 32px;
+		padding-right: 32px;
+		max-width: 460px;
+	}
+	.button-Prev {
+		width: 24px;
+		height: 147px;
+	}
+
+	.button-Next {
+		height: 147px;
+		width: 24px;
+	}
+}
+
+@media (max-width: 500px) {
+	.juststreamit {
+		height: 75px;
+	}
+
+	.nav ul {
+		flex-direction: column;
+		align-items: center;
+		line-height: 40px;
+	}
+
+	.slider-container {
+		width: 55%;
+	}
+
+	.footerMain .block {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.footerSecondary .block p {
+		text-align: center;
+	}
+}

@@ -1,0 +1,19 @@
+{
+  "name": "JustStreamIt",
+  "version": "1.0.0",
+  "description": "JustStreamIt application web",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server . -p 8080",
+    "test": "echo \"No test specified\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Anthony-landry/P6-JustStreamIt.git"
+  },
+  "author": "Landry anthony",
+  "license": "ISC",
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  }
+}
