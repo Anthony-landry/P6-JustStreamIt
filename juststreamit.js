@@ -345,7 +345,7 @@ async function categorie(sessionStorageOK, categorie, nb) {
 
 			imageFilm.addEventListener("click", function (event) {
 				modale(event.target.dataset.url, zoneModale);
-				zoneModale.style.display = "block";
+				zoneModale.style.display = "grid";
 			});
 			y += 1;
 		}
@@ -357,9 +357,7 @@ function slider(categorie) {
 	/* Décalage du carroussel */
 	const widthOutput = window.innerWidth;
 	let maxwidth = widthOutput < 1000 ? 850 : 1350;
-	let slider = document.querySelector(
-		".slider[name='slider" + categorie + "']"
-	);
+	let slider = document.getElementById("categorie").querySelector(".slider");
 	let prevBtn = document.querySelector("#prevBtn" + categorie);
 	let nextBtn = document.querySelector("#nextBtn" + categorie);
 
